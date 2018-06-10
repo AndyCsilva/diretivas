@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
+import { CicloUiComponent } from './ciclo-ui/ciclo-ui.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DiretivaNgifComponent
+    DiretivaNgifComponent,
+    CicloUiComponent
   ],
   imports: [
     BrowserModule
