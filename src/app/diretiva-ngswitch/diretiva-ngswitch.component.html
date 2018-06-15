@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" [class.active]="aba == 'home'" (click)="aba = 'home'">Home</a>
+            <a class="nav-item nav-link" [class.active]="aba == 'feature'" (click)="aba = 'feature'">Features</a>
+            <a class="nav-item nav-link" [class.active]="aba == 'pricing'" (click)="aba = 'pricing'">Pricing</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container" [ngSwitch]="aba">
+    <p *ngSwitchCase="'home'">Modo Home Ativado</p>
+    <p *ngSwitchCase="'feature'">Modo feature Ativado</p>
+    <p *ngSwitchDefault>Modo pricing Ativado</p>
+</div>

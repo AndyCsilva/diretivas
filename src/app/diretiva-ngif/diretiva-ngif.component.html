@@ -1,3 +1,10 @@
-<p>
-  diretiva-ngif works!
-</p>
+<h4>
+    *NgIf
+</h4>
+
+<div *ngIf="cursos.length > 0">
+    <strong>Lista de cursos aqui</strong>
+</div>
+<div *ngIf="cursos.length == 0">
+    <strong>Não existem cursos para serem listados</strong>
+</div>
