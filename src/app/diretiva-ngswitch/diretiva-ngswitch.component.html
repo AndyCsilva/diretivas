@@ -16,3 +16,17 @@
     <p *ngSwitchCase="'feature'">Modo feature Ativado</p>
     <p *ngSwitchDefault>Modo pricing Ativado</p>
 </div>
+
+<h5>Removendo o * e usando template</h5>
+
+<div class="container" [ngSwitch]="aba">
+    <ng-template [ngSwitchCase]="'home'">
+        <p>Modo Home ativado</p>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'feature'">
+        <p>Modo feature ativado</p>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'pricing'" ngSwitchDefault>
+        <p>Modo pricing Ativado</p>
+    </ng-template>
+</div>

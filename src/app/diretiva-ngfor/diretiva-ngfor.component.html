@@ -3,3 +3,11 @@
 <ul>
     <li *ngFor="let c of cursos, let i = index">{{ c }} índice {{ i }}</li>
 </ul>
+
+<h5>Removendo o * e utilizando template</h5>
+
+<ul>
+    <ng-template ngFor [ngForOf]="cursos" let-c let-i="index">
+        <li>{{ c }} índice {{ i }}</li>
+    </ng-template>
+</ul>
